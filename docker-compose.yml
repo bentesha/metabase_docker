@@ -9,3 +9,4 @@ services:
       - '$PORT:3000'
     volumes:
       - '.data/metabase:/metabase-data/'
+    network_mode: host
