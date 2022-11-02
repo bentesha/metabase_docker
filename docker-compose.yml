@@ -1,0 +1,11 @@
+version: '3.0'
+services:
+  metabase:
+    image: metabase/metabase:latest
+    environment:
+      MB_DB_FILE: /metabase-data/metabase.db
+      JAVA_TIMEZONE: Africa/Dar_Es_Salaam
+    ports:
+      - '$PORT:3000'
+    volumes:
+      - '.data/metabase:/metabase-data/'
